@@ -750,20 +750,37 @@ document.addEventListener('DOMContentLoaded', () => {
 <script async src="/nicolofamily/assets/js/functions.js"></script>
 
 <script>
-    const setC=(n,v,d)=>document.cookie=`${n}=${v};expires=${new Date(Date.now()+d*864e5).toUTCString()};path=/`;
-    const getC=n=>document.cookie.split('; ').find(r=>r.startsWith(n+'='))?.split('=')[1];
-    const ui=a=>{
-      contactBtn.disabled=!a;
-      newsLetterBtn.disabled=!a;
-      toolTipToggleAcc.style.display=a?"none":"block";
-      oCookies.style.display=a?"none":"block";
-    };
-    document.addEventListener("DOMContentLoaded",()=>{
-      ui(getC("roTokyoCookiesAccepted")==="true");
-      btnCockieAccept.onclick=()=>{ setC("roTokyoCookiesAccepted","true",7); ui(true); };
-    });
+  const setC=(n,v,d)=>document.cookie=`${n}=${v};expires=${new Date(Date.now()+d*864e5).toUTCString()};path=/`;
+  const getC=n=>document.cookie.split('; ').find(r=>r.startsWith(n+'='))?.split('=')[1];
+  const ui=a=>{
+    contactBtn.disabled=!a;
+    newsLetterBtn.disabled=!a;
+    toolTipToggleAcc.style.display=a?"none":"block";
+    oCookies.style.display=a?"none":"block";
+  };
+  document.addEventListener("DOMContentLoaded",()=>{
+    ui(getC("roTokyoCookiesAccepted")==="true");
+    btnCockieAccept.onclick=()=>{ setC("roTokyoCookiesAccepted","true",7); ui(true); };
+  });
 </script>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- End Javascript -->
 </body>

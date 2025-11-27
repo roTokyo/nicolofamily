@@ -1108,7 +1108,7 @@ table {
   }
 }
 
-#o-cookies {
+#oCookies {
   padding: 15px 15px;
   display: none;
   text-align: center;
@@ -1119,25 +1119,25 @@ table {
   background-color: rgba(38, 57, 89, 0.8);
   color: white;
 }
-#o-cookies span.centra {
+#oCookies span.centra {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   border: 1px solid black;
 }
-#o-cookies a {
+#oCookies a {
   cursor: pointer;
   margin-left: 10px;
 }
 
 @media (max-width: 767px) {
-  #o-cookies span {
+  #oCookies span {
     display: block;
     padding-top: 3px;
     margin-bottom: 13px;
   }
-  #o-cookies a {
+  #oCookies a {
     position: relative;
     bottom: 4px;
   }

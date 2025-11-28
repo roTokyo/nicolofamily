@@ -324,6 +324,21 @@ h1.scheda-title {
   color: green;
 }
 
+.primo_carattere::first-letter {
+  font-weight: bold;
+  font-size: 30px;
+  vertical-align: -5px;
+}
+.primo_carattere.orange::first-letter {
+  color: orange;
+}
+.primo_carattere.red::first-letter {
+  color: red;
+}
+.primo_carattere.black::first-letter {
+  color: black;
+}
+
 .siti {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
@@ -2017,49 +2032,40 @@ section {
 .gallery {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
 }
-.gallery img {
+.gallery > a,
+.gallery > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery > a > figcaption,
+.gallery > span > figcaption {
+  flex: 0 0 auto;
+  text-align: center;
   width: 100%;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
-.gallery > a {
-  display: block;
-}
 .gallery.half > a,
-.gallery.half > img {
-  width: calc(50% - 0.5em);
-}
 .gallery.half > span {
-  display: block;
   width: calc(50% - 0.5em);
-}
-.gallery.half figcaption {
-  width: 100%;
 }
 .gallery.third > a,
-.gallery.third > img {
-  width: calc(33.3333% - 0.5em);
-}
 .gallery.third > span {
-  display: block;
   width: calc(33.3333% - 0.5em);
-}
-.gallery.third figcaption {
-  width: 100%;
 }
 .gallery.fourth > a,
-.gallery.fourth > img {
-  width: calc(25% - 0.4em);
-}
 .gallery.fourth > span {
-  display: block;
   width: calc(25% - 0.4em);
-}
-.gallery.fourth figcaption {
-  width: 100%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -2068,13 +2074,8 @@ section {
     justify-content: center;
     align-items: center;
   }
-  .gallery.half > a,
-  .gallery.half > img, .gallery.third > a,
-  .gallery.third > img, .gallery.fourth > a,
-  .gallery.fourth > img {
-    width: calc(100% - 0.5em);
-  }
-  .gallery.half > span, .gallery.third > span, .gallery.fourth > span {
+  .gallery > a,
+  .gallery > span {
     width: calc(100% - 0.5em);
   }
 }
